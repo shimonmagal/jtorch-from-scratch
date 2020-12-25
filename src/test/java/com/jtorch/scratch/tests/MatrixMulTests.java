@@ -1,3 +1,5 @@
+package com.jtorch.scratch.tests;
+
 import com.jtorch.scratch.MatrixMultiplication;
 import org.junit.jupiter.api.Test;
 

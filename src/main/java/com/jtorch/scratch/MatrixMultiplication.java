@@ -1,3 +1,5 @@
+package com.jtorch.scratch;
+
 public class MatrixMultiplication {
     public static double[][] multiply(double[][] matrix1, double[][] matrix2) {
         int matrix1Cols = matrix1.length;
