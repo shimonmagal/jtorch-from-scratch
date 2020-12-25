@@ -1,3 +1,4 @@
+import com.jtorch.scratch.MatrixMultiplication;
 import org.junit.jupiter.api.Test;
 
 public class MatrixMulTests {
