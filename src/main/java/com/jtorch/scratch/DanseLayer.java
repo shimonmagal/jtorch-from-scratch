@@ -1,4 +1,7 @@
 package com.jtorch.scratch;
 
-public class Layer {
+public class DanseLayer {
+    public DanseLayer(int inputSize, int outputSize) {
+
+    }
 }
