@@ -8,6 +8,10 @@ public class Matrix {
         this.matrixArray = matrix;
     }
 
+    public Matrix(int inputSize, int neuronSize) {
+        this(new double[inputSize][neuronSize]);
+    }
+
 
     public Matrix multiply(Matrix matrix2) {
         int matrix1Cols = this.matrixArray.length;

@@ -1,7 +1,9 @@
 package com.jtorch.scratch;
 
 public class DanseLayer {
-    public DanseLayer(int inputSize, int outputSize) {
+    private final Matrix weights;
 
+    public DanseLayer(int inputSize, int neuronSize) {
+        weights = new Matrix(inputSize, neuronSize);
     }
 }
