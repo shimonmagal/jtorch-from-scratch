@@ -10,12 +10,11 @@ public class MatrixMulTests {
     {
         double[][] m1 = { {1, 2, 3}, {1, 2, 3} };
         double[][] m2 = { { 1, 4}, {-3, 5}, {6,7}};
-        double[][] res = Matrix.multiply(m1, m2);
+        Matrix res = new Matrix(m1).multiply(new Matrix(m2));
 
-        System.out.println(res[0][1]);
-        Assertions.assertEquals(res[0][0], 13.0);
-        Assertions.assertEquals(res[0][1], 35.0);
-        Assertions.assertEquals(res[1][0], 13.0);
-        Assertions.assertEquals(res[1][1], 35.0);
+        Assertions.assertEquals(res.get(0,0), 13.0);
+        Assertions.assertEquals(res.get(0,1), 35.0);
+        Assertions.assertEquals(res.get(1,0), 13.0);
+        Assertions.assertEquals(res.get(1,1), 35.0);
     }
 }

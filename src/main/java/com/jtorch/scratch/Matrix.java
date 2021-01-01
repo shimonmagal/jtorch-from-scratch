@@ -31,4 +31,8 @@ public class Matrix {
 
         return new Matrix(matrixResult);
     }
+
+    public double get(int x, int y) {
+        return matrixArray[x][y];
+    }
 }
