@@ -17,4 +17,15 @@ public class MatrixMulTests {
         Assertions.assertEquals(res.get(1,0), 13.0);
         Assertions.assertEquals(res.get(1,1), 35.0);
     }
+
+    @Test
+    public void testMatrixAdd()
+    {
+        double[][] m1 = { {1, 2, 3}, {1, 2, 3} };
+        double[][] m2 = { {4, 5, 2}, {1, 2, 3} };
+        Matrix res = new Matrix(m1).add(new Matrix(m2));
+
+        Assertions.assertEquals(res.get(0,0), 5);
+        Assertions.assertEquals(res.get(0,1), 7);
+    }
 }
