@@ -32,6 +32,21 @@ public class Matrix {
         return new Matrix(matrixResult);
     }
 
+    public Matrix add(Matrix matrix) {
+        int cols = matrixArray.length;
+        int rows = matrixArray[0].length;
+
+        double[][] res = new double[cols][rows];
+
+        for (int i = 0 ; i < rows; i++) {
+            for (int j = 0 ; j < cols; j++) {
+                res[j][i] = this.matrixArray[j][i] + matrix.matrixArray[j][i];
+            }
+        }
+
+        return new Matrix(res);
+    }
+
     public double get(int x, int y) {
         return matrixArray[x][y];
     }
