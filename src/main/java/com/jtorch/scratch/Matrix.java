@@ -12,6 +12,17 @@ public class Matrix {
         this(new double[inputSize][neuronSize]);
     }
 
+    public void randomize()
+    {
+        int cols = matrixArray.length;
+        int rows = matrixArray[0].length;
+
+        for (int i = 0 ; i < rows; i++) {
+            for (int j = 0 ; j < cols; j++) {
+                matrixArray[j][i] = Math.random();
+            }
+        }
+    }
 
     public Matrix multiply(Matrix matrix2) {
         int matrix1Cols = this.matrixArray.length;
@@ -41,6 +52,21 @@ public class Matrix {
         for (int i = 0 ; i < rows; i++) {
             for (int j = 0 ; j < cols; j++) {
                 res[j][i] = this.matrixArray[j][i] + matrix.matrixArray[j][i];
+            }
+        }
+
+        return new Matrix(res);
+    }
+
+    public Matrix max(double val) {
+        int cols = matrixArray.length;
+        int rows = matrixArray[0].length;
+
+        double[][] res = new double[cols][rows];
+
+        for (int i = 0 ; i < rows; i++) {
+            for (int j = 0 ; j < cols; j++) {
+                res[j][i] = Math.max(this.matrixArray[j][i], val)
             }
         }
 
