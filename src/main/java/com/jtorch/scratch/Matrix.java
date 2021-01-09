@@ -66,7 +66,22 @@ public class Matrix {
 
         for (int i = 0 ; i < rows; i++) {
             for (int j = 0 ; j < cols; j++) {
-                res[j][i] = Math.max(this.matrixArray[j][i], val)
+                res[j][i] = Math.max(this.matrixArray[j][i], val);
+            }
+        }
+
+        return new Matrix(res);
+    }
+
+    public static Matrix pow(double constant, Matrix matrix) {
+        int cols = matrix.matrixArray.length;
+        int rows = matrix.matrixArray[0].length;
+
+        double[][] res = new double[cols][rows];
+
+        for (int i = 0 ; i < rows; i++) {
+            for (int j = 0 ; j < cols; j++) {
+                res[j][i] = Math.pow(constant, matrix.matrixArray[j][i]);
             }
         }
 
