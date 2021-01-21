@@ -103,6 +103,32 @@ public class Matrix {
         return new Matrix(res);
     }
 
+    public Matrix substractMax() {
+        int cols = this.matrixArray.length;
+        int rows = this.matrixArray[0].length;
+
+        double maxValue = 0;
+
+        for (int i = 0 ; i < rows; i++) {
+            for (int j = 0 ; j < cols; j++) {
+                if (matrixArray[j][i] > maxValue)
+                {
+                    maxValue = matrixArray[j][i];
+                }
+            }
+        }
+
+        double[][] res = new double[cols][rows];
+
+        for (int i = 0 ; i < rows; i++) {
+            for (int j = 0 ; j < cols; j++) {
+                res[j][i] = matrixArray[j][i] - maxValue;
+            }
+        }
+
+        return new Matrix(res);
+    }
+
     public double get(int x, int y) {
         return matrixArray[x][y];
     }
