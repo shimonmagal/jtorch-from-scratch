@@ -7,6 +7,8 @@ public class DanseLayer {
 
     public DanseLayer(int inputSize, int neuronSize) {
         weights = new Matrix(inputSize, neuronSize);
+        weights.randomize();
+
         biases = new Matrix(1, neuronSize);
     }
 
