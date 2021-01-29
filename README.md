@@ -11,3 +11,4 @@ This project is still WIP - I still need to implement:
   - this also includes validating with MNIST test data
 - loss function
 - back propogation
+- consider using a lib for matrix operation
